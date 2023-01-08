@@ -19,9 +19,10 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Build with Maven
-        run: mvn -B -Pdevelopment clean enforcer:display-info clover:instrument install
-      - name: Show available updates
-        run: mvn -B -Pdevelopment versions:display-dependency-updates versions:display-plugin-updates versions:plugin-updates-report
+        # run: mvn -B -Pdevelopment clean enforcer:display-info clover:instrument install
+        run: mvn -B clean enforcer:display-info install
+#      - name: Show available updates
+#        run: mvn -B -Pdevelopment versions:display-dependency-updates versions:display-plugin-updates versions:plugin-updates-report
 # Do not run to save minutes for free GH plan
 #      - name: Build site with Maven
 #        run: mvn -B site:site
