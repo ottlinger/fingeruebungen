@@ -19,7 +19,7 @@ public class Calculator {
             String zweiteZahl = s.nextLine();
 
             System.out.println("==========================================");
-            System.out.println("> ");
+            System.out.println("> " + new Addierer(ersteZahl, zweiteZahl).getSumme());
 
         }
     }
