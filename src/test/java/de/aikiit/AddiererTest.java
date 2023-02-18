@@ -13,4 +13,10 @@ public class AddiererTest {
         String s2 = "43";
         assertEquals("85", new Addierer(s1, s2).getSumme());
     }
+
+    @Test
+    public void addiereWeitereZahlen() {
+        //assertEquals("6", new Addierer("a", "b").getSumme());
+        assertEquals("6", new Addierer("1", "5").getSumme());
+    }
 }

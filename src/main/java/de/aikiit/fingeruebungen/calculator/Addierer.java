@@ -10,8 +10,7 @@ public class Addierer {
     }
 
     public String getSumme() {
-        //return summand1 + summand2;
-        return "85";
+        return String.valueOf(Integer.valueOf(summand1) + Integer.valueOf(summand2));
     }
 
 }
