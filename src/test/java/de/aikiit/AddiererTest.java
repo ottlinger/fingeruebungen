@@ -33,6 +33,6 @@ public class AddiererTest {
 
     @Test
     public void addiereSchrott() {
-        
+        assertEquals("Du hast Quatsch eingegeben", new Addierer("Quatsch", "1").getSumme());
     }
 }

@@ -16,6 +16,10 @@ public class Addierer {
     }
 
     public String getSumme() {
+        if (!isNumeric()) {
+            return "Du hast Quatsch eingegeben";
+        }
+
         return String.valueOf(Double.valueOf(summand1) + Double.valueOf(summand2));
     }
 
