@@ -10,7 +10,7 @@ public class Addierer {
     }
 
     public String getSumme() {
-        return String.valueOf(Integer.valueOf(summand1) + Integer.valueOf(summand2));
+        return String.valueOf(Double.valueOf(summand1) + Double.valueOf(summand2));
     }
 
 }
