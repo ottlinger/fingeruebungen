@@ -1,5 +1,7 @@
 package de.aikiit.fingeruebungen.calculator;
 
+import org.apache.commons.lang3.math.NumberUtils;
+
 public class Addierer {
     private String summand1;
     private String summand2;
@@ -10,7 +12,7 @@ public class Addierer {
     }
 
     public boolean isNumeric() {
-        return true;
+        return NumberUtils.isCreatable(this.summand1) && NumberUtils.isCreatable(this.summand2);
     }
 
     public String getSumme() {

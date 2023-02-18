@@ -3,8 +3,7 @@ package de.aikiit;
 import de.aikiit.fingeruebungen.calculator.Addierer;
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AddiererTest {
 
@@ -23,5 +22,17 @@ public class AddiererTest {
     @Test
     public void isNumeric_withNumbers() {
         assertTrue(new Addierer("6", "5").isNumeric());
+    }
+
+    @Test
+    public void isNumeric_withLetters() {
+        assertFalse(new Addierer("a", "5").isNumeric());
+        assertFalse(new Addierer("54", "b").isNumeric());
+        assertFalse(new Addierer("only", "me").isNumeric());
+    }
+
+    @Test
+    public void addiereSchrott() {
+        
     }
 }
