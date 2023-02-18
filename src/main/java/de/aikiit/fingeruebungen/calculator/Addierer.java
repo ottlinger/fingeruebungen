@@ -9,6 +9,10 @@ public class Addierer {
         this.summand2 = summand2;
     }
 
+    public boolean isNumeric() {
+        return true;
+    }
+
     public String getSumme() {
         return String.valueOf(Double.valueOf(summand1) + Double.valueOf(summand2));
     }
