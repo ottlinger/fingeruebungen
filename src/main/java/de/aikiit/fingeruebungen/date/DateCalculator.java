@@ -41,7 +41,9 @@ public class DateCalculator {
         }
 
         String year = String.valueOf(date.getYear());
-        return Integer.valueOf(year.substring(0, 2)) + Integer.valueOf(year.substring(2, 4));
+        String firstPart = year.substring(0, 2);
+        String secondPart = year.substring(2, 4);
+        return Integer.valueOf(firstPart) + Integer.valueOf(secondPart);
     }
 
 }
