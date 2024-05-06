@@ -1,4 +1,4 @@
-package de.aikiit;
+package de.aikiit.fingeruebungen.calculator;
 
 import org.junit.Test;
 
@@ -8,6 +8,6 @@ public class AppTest {
 
     @Test
     public void testApp() {
-        assertNotNull(new App());
+        assertNotNull(new de.aikiit.App());
     }
 }

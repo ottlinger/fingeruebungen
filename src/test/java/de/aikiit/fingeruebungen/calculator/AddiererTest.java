@@ -1,6 +1,5 @@
-package de.aikiit;
+package de.aikiit.fingeruebungen.calculator;
 
-import de.aikiit.fingeruebungen.calculator.Addierer;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
