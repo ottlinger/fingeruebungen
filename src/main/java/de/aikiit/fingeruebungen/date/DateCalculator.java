@@ -7,15 +7,16 @@ import com.google.common.annotations.VisibleForTesting;
 public class DateCalculator {
 
     static final Integer TARGET = Integer.valueOf(68);
+    static final Integer STOP_YEAR = 2027;
 
     public static void main(String[] args) {
-        System.out.println("Starting to calculate ....");
+        System.out.println("Starting to calculate special dates from today ....");
         DateCalculator.calculateDates();
     }
 
     private static void calculateDates() {
-        LocalDate start = LocalDate.of(2022, 1, 1);
-        while (true) {
+        LocalDate start = LocalDate.now();
+        while (start.getYear() <= STOP_YEAR) {
             if (TARGET.equals(calcSum(start))) {
                 System.out.println(start);
             }
