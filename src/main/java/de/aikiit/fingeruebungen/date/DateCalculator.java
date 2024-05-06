@@ -22,7 +22,7 @@ private static final Integer TARGET = Integer.valueOf(68);
         }
     }
 
-    private static int calcSum(LocalDate date) {
+    static int calcSum(LocalDate date) {
         if (date == null) {
             return 0;
         }
@@ -31,7 +31,8 @@ private static final Integer TARGET = Integer.valueOf(68);
 
     }
 
-    private static Integer splitYear(LocalDate date) {
+    @VisibleForTesting
+    static Integer splitYear(LocalDate date) {
         if (date == null) {
             return 0;
         }
