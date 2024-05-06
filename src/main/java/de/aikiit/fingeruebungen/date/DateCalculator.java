@@ -2,6 +2,8 @@ package de.aikiit.fingeruebungen.date;
 
 import java.time.LocalDate;
 
+import com.google.common.annotations.VisibleForTesting;
+
 public class DateCalculator {
 
 private static final Integer TARGET = Integer.valueOf(68);
@@ -22,6 +24,7 @@ private static final Integer TARGET = Integer.valueOf(68);
         }
     }
 
+    @VisibleForTesting
     static int calcSum(LocalDate date) {
         if (date == null) {
             return 0;
