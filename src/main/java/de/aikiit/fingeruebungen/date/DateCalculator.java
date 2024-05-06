@@ -6,7 +6,7 @@ import com.google.common.annotations.VisibleForTesting;
 
 public class DateCalculator {
 
-private static final Integer TARGET = Integer.valueOf(68);
+    static final Integer TARGET = Integer.valueOf(68);
 
     public static void main(String[] args) {
         System.out.println("Starting to calculate ....");
@@ -16,7 +16,6 @@ private static final Integer TARGET = Integer.valueOf(68);
     private static void calculateDates() {
         LocalDate start = LocalDate.of(2022, 1, 1);
         while (true) {
-            // System.out.println(start + " /// " + calcSum(start));
             if (TARGET.equals(calcSum(start))) {
                 System.out.println(start);
             }
@@ -41,8 +40,7 @@ private static final Integer TARGET = Integer.valueOf(68);
         }
 
         String year = String.valueOf(date.getYear());
-        return Integer.valueOf(year.substring(0, 1)) + Integer.valueOf(year.substring(0, 1));
-
+        return Integer.valueOf(year.substring(0, 2)) + Integer.valueOf(year.substring(2, 4));
     }
 
 }

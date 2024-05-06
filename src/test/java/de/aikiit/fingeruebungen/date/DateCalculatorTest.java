@@ -1,6 +1,7 @@
 package de.aikiit.fingeruebungen.date;
 
 import static org.assertj.core.api.Assertions.*;
+import static de.aikiit.fingeruebungen.date.DateCalculator.*;
 
 import java.time.LocalDate;
 
@@ -9,13 +10,23 @@ import org.junit.Test;
 public class DateCalculatorTest {
 
     @Test
-    void checkNullSafety() {
-        assertThat(DateCalculator.calcSum(null)).isEqualTo(56);
+    public void checkNullSafety() {
+        assertThat(calcSum(null)).isEqualTo(0);
     }
 
     @Test
-    void calculateCorrectValue() {
-        assertThat(DateCalculator.calcSum(LocalDate.of(1900, 3, 17))).isEqualTo(56);
+    public void calculateCorrectValue() {
+        assertThat(calcSum(LocalDate.of(2022, 2, 24))).isEqualTo(TARGET);
+    }
+
+    @Test
+    public void checkNullSafetyYearExtraction() {
+        assertThat(splitYear(null)).isEqualTo(0);
+    }
+
+    @Test
+    public void checkYearExtraction() {
+        assertThat(splitYear(LocalDate.of(1901, 1, 17))).isEqualTo(19+1);
     }
 
 }
