@@ -11,7 +11,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.jupiter.version>5.10.3</junit.jupiter.version>
     <junit.platform.version>1.10.3</junit.platform.version>
-    <logger.version>2.23.1</logger.version>
+    <logger.version>2.24.0</logger.version>
     <assertj.version>3.26.3</assertj.version>
     <mockito.version>4.11.0</mockito.version>
     <lombok.version>1.18.24</lombok.version>
