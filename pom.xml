@@ -12,7 +12,7 @@
     <junit.jupiter.version>5.11.3</junit.jupiter.version>
     <junit.platform.version>1.11.4</junit.platform.version>
     <logger.version>2.24.3</logger.version>
-    <assertj.version>3.26.3</assertj.version>
+    <assertj.version>3.27.2</assertj.version>
     <mockito.version>4.11.0</mockito.version>
     <lombok.version>1.18.24</lombok.version>
     <javadoc.version>3.4.1</javadoc.version>
