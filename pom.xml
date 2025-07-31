@@ -9,7 +9,7 @@
   <url>https://github.com/ottlinger/fingeruebungen</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <logger.version>2.24.3</logger.version>
+    <logger.version>2.25.1</logger.version>
     <assertj.version>3.27.3</assertj.version>
     <mockito.version>4.11.0</mockito.version>
     <lombok.version>1.18.24</lombok.version>
