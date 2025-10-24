@@ -1,8 +1,9 @@
 package de.aikiit.fingeruebungen.date;
 
-import java.time.LocalDate;
-
 import com.google.common.annotations.VisibleForTesting;
+
+import java.time.LocalDate;
+import java.util.Optional;
 
 public class DateCalculator {
 
@@ -11,12 +12,18 @@ public class DateCalculator {
 
     public static void main(String[] args) {
         System.out.println("Starting to calculate special dates from today ....");
-        DateCalculator.calculateDates();
+        if (args.length >= 1) {
+            DateCalculator.calculateDates(Optional.of(Integer.valueOf(args[0])));
+        } else {
+            DateCalculator.calculateDates(Optional.empty());
+        }
     }
 
-    private static void calculateDates() {
+    private static void calculateDates(Optional<Integer> stopYear) {
         LocalDate start = LocalDate.now();
-        while (start.getYear() <= STOP_YEAR) {
+
+        Integer stop = stopYear.orElse(STOP_YEAR);
+        while (start.getYear() <= stop) {
             if (TARGET.equals(calcSum(start))) {
                 System.out.println(start);
             }
@@ -43,7 +50,7 @@ public class DateCalculator {
         String year = String.valueOf(date.getYear());
         String firstPart = year.substring(0, 2);
         String secondPart = year.substring(2, 4);
-        return Integer.valueOf(firstPart) + Integer.valueOf(secondPart);
+        return Integer.parseInt(firstPart) + Integer.parseInt(secondPart);
     }
 
 }
