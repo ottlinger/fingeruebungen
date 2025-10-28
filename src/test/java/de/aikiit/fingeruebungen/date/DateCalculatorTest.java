@@ -1,11 +1,11 @@
 package de.aikiit.fingeruebungen.date;
 
+import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.*;
 import static de.aikiit.fingeruebungen.date.DateCalculator.*;
 
 import java.time.LocalDate;
-
-import org.junit.Test;
 
 public class DateCalculatorTest {
 

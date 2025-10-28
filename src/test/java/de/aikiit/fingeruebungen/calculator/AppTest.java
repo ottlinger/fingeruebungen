@@ -1,13 +1,13 @@
 package de.aikiit.fingeruebungen.calculator;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertNotNull;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class AppTest {
 
     @Test
     public void testApp() {
-        assertNotNull(new de.aikiit.App());
+        assertThat(new de.aikiit.App()).isNotNull();
     }
 }

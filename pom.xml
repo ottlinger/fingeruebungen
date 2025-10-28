@@ -13,8 +13,6 @@
     <mockito.version>4.11.0</mockito.version>
     <lombok.version>1.18.24</lombok.version>
     <javadoc.version>3.4.1</javadoc.version>
-    <surefire.version>3.0.0-M7</surefire.version>
-    <rat.version>0.15</rat.version>
     <guava.version>31.1-jre</guava.version>
   </properties>
   <dependencyManagement>
@@ -29,7 +27,7 @@
       <dependency>
         <groupId>org.junit</groupId>
         <artifactId>junit-bom</artifactId>
-        <version>5.13.1</version>
+        <version>6.0.0</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -53,8 +51,8 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.junit.platform</groupId>
-      <artifactId>junit-platform-runner</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -125,8 +123,9 @@
           <version>3.14.1</version>
           <configuration>
             <encoding>${project.build.sourceEncoding}</encoding>
-            <source>1.8</source>
-            <target>1.8</target>
+            <release>17</release>
+            <source>17</source>
+            <target>17</target>
           </configuration>
         </plugin>
       </plugins>
